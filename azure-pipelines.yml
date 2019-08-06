@@ -18,10 +18,19 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 
+
+#- task: AWSShellScript@1
+ # inputs:
+  #  awsCredentials: 'AzureAWS'
+   # regionName: 'ap-south-1'
+    #scriptType: 'filePath'
+   # filePath: 'C:\Users\kbhide\Desktop\Azure POC Final\ShellScriptExample.sh'
+
 - task: AWSShellScript@1
   inputs:
     awsCredentials: 'AzureAWS'
     regionName: 'ap-south-1'
-    scriptType: 'filePath'
-    filePath: 'C:\Users\kbhide\Desktop\Azure POC Final\ShellScriptExample.sh'
-
+    scriptType: 'inline'
+    inlineScript: |
+      #!/bin/sh
+      echo "Hello world"
