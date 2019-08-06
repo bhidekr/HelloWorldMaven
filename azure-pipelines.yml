@@ -24,3 +24,4 @@ steps:
     regionName: 'ap-south-1'
     scriptType: 'filePath'
     filePath: 'C:\Users\kbhide\Desktop\Azure POC Final\ShellScriptExample.sh'
+
